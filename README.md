@@ -67,10 +67,13 @@ python benchmark.py
 ```
 ## Limitations
 
-- Scores the full response, not just the core claim — verbose answers with 
-  varying details score lower than they should
 - Consistent refusals score HIGH even when the question is genuinely uncertain
 - Does not detect confidently wrong answers
+
+## Improvements Made
+
+- Added core answer extraction before embedding — reduces noise from 
+  verbose responses and improves accuracy on factual questions
 ## What I learned
 
 - Embeddings capture semantic meaning — two differently worded answers can be 95% similar
