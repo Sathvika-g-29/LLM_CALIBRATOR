@@ -11,51 +11,51 @@
     {
       "question": "What is 10 multiplied by 10?",
       "expected": "HIGH",
-      "confidence_score": 1.0,
+      "confidence_score": 0.9942,
       "label": "HIGH confidence",
       "match": "\u2713"
     },
     {
       "question": "How many continents are there?",
       "expected": "HIGH",
-      "confidence_score": 0.9971,
+      "confidence_score": 1.0,
       "label": "HIGH confidence",
       "match": "\u2713"
     },
     {
       "question": "What language is spoken in Brazil?",
       "expected": "HIGH",
-      "confidence_score": 0.9214,
-      "label": "MEDIUM confidence",
-      "match": "\u2717"
+      "confidence_score": 0.9871,
+      "label": "HIGH confidence",
+      "match": "\u2713"
     },
     {
       "question": "Who is the greatest footballer of all time?",
       "expected": "MEDIUM",
-      "confidence_score": 0.9123,
-      "label": "MEDIUM confidence",
-      "match": "\u2713"
+      "confidence_score": 0.7051,
+      "label": "LOW confidence",
+      "match": "\u2717"
     },
     {
       "question": "Is social media good or bad for society?",
       "expected": "MEDIUM",
-      "confidence_score": 0.9139,
+      "confidence_score": 0.9404,
       "label": "MEDIUM confidence",
       "match": "\u2713"
     },
     {
       "question": "What will Bitcoin price be next year?",
       "expected": "LOW",
-      "confidence_score": 0.9225,
-      "label": "MEDIUM confidence",
-      "match": "\u2717"
+      "confidence_score": 0.7056,
+      "label": "LOW confidence",
+      "match": "\u2713"
     },
     {
       "question": "Who will win the next US election?",
       "expected": "LOW",
-      "confidence_score": 0.7804,
-      "label": "LOW confidence",
-      "match": "\u2713"
+      "confidence_score": 0.9589,
+      "label": "HIGH confidence",
+      "match": "\u2717"
     }
   ]
 }

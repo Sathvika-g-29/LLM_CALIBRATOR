@@ -31,14 +31,42 @@ def cosine_similarity(vec1, vec2):
     magnitude2 = sum(b ** 2 for b in vec2) ** 0.5
     return dot_product / (magnitude1 * magnitude2)
 
-def compute_confidence(answers):
-    """Compare all answers against each other and return a confidence score."""
-    embeddings = [get_embedding(ans) for ans in answers]
+def extract_core_answer(text):
+    """Ask the LLM to compress a verbose answer to its core claim."""
+    response = groq_client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        messages=[
+            {
+                "role": "system",
+                "content": "Extract the core factual claim from the answer in one short sentence. No explanation, no extra detail. Just the essential answer."
+            },
+            {
+                "role": "user",
+                "content": text
+            }
+        ],
+        temperature=0.0,  # no randomness — we want consistent extraction
+        max_tokens=50
+    )
+    return response.choices[0].message.content.strip()
+
+def compute_confidence(answers, extract=True):
+    """Compare all answers and return a confidence score."""
+    
+    if extract:
+        print("   Extracting core answers...")
+        processed = [extract_core_answer(ans) for ans in answers]
+        for i, p in enumerate(processed, 1):
+            print(f"   Core {i}: {p}")
+    else:
+        processed = answers
+
+    embeddings = [get_embedding(ans) for ans in processed]
     
     scores = []
     n = len(embeddings)
     for i in range(n):
-        for j in range(i + 1, n):  # compare every pair
+        for j in range(i + 1, n):
             score = cosine_similarity(embeddings[i], embeddings[j])
             scores.append(score)
     
