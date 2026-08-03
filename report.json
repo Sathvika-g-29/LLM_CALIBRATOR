@@ -1,54 +1,14 @@
 [
   {
-    "question": "What is the capital of France?",
-    "confidence_score": 1.0,
+    "question": "Will it rain tomorrow?",
+    "confidence_score": 0.9686,
     "label": "HIGH confidence",
     "answers": [
-      "The capital of France is Paris.",
-      "The capital of France is Paris.",
-      "The capital of France is Paris.",
-      "The capital of France is Paris.",
-      "The capital of France is Paris."
-    ],
-    "timestamp": "2026-08-03T14:09:01.878704"
-  },
-  {
-    "question": "Who will win the next FIFA World Cup?",
-    "confidence_score": 0.8059,
-    "label": "MEDIUM confidence",
-    "answers": [
-      "Predicting the winner of the next FIFA World Cup is challenging, as it depends on various factors such as team performance, player injuries, and coaching strategies. However, I can provide some insights based on current trends and past performances.\n\nThe next FIFA World Cup is scheduled to take place in 2026, and several teams are considered top contenders. Some of the favorites to win the tournament include:\n\n1. **Brazil**: The five-time World Cup winners have a rich history of producing talented players and have",
-      "Unfortunately, predicting the winner of the next FIFA World Cup is extremely challenging, if not impossible. The beautiful game is known for its unpredictability, and many factors can influence the outcome of a tournament, including team dynamics, player form, injuries, and luck.\n\nThat being said, I can provide some insights based on current trends and team performances. However, please keep in mind that these are just speculative and not definitive predictions.\n\nSome of the top contenders for the next FIFA World Cup include:\n\n1.",
-      "Predicting the winner of the next FIFA World Cup is challenging, as it depends on various factors such as team performance, player injuries, and strategic decisions. However, I can provide some insights based on current trends and past performances.\n\nThe next FIFA World Cup is scheduled to take place in 2026, and several top teams are likely to be contenders. Some of the favorites to win the tournament include:\n\n1. **Brazil**: As a five-time World Cup winner, Brazil has a rich history of",
-      "Unfortunately, predicting the winner of the next FIFA World Cup is a challenging task, as it depends on various factors such as team performance, player injuries, coaching strategies, and a bit of luck.\n\nHowever, I can provide you with some insights based on current trends and team rankings. As of my knowledge cutoff, the top-ranked teams in the FIFA World Rankings are:\n\n1. Brazil\n2. Belgium\n3. France\n4. Argentina\n5. England\n\nThese teams have consistently performed well in",
-      "It's challenging to predict with certainty who will win the next FIFA World Cup, as it depends on various factors such as team performance, player injuries, and other unforeseen circumstances. However, based on current team rankings, past performances, and other indicators, some of the top contenders for the next FIFA World Cup include:\n\n1. **Brazil**: As one of the most successful teams in World Cup history, Brazil is always a strong contender.\n2. **France**: The current World Cup holders have a"
-    ],
-    "timestamp": "2026-08-03T14:09:08.782890"
-  },
-  {
-    "question": "What is 2 + 2?",
-    "confidence_score": 1.0,
-    "label": "HIGH confidence",
-    "answers": [
-      "2 + 2 = 4.",
-      "2 + 2 = 4.",
-      "2 + 2 = 4.",
-      "2 + 2 = 4.",
-      "2 + 2 = 4."
-    ],
-    "timestamp": "2026-08-03T14:09:11.354404"
-  },
-  {
-    "question": "What will the stock market do tomorrow?",
-    "confidence_score": 0.8106,
-    "label": "MEDIUM confidence",
-    "answers": [
-      "I'd love to provide a definitive answer, but unfortunately, predicting the stock market with certainty is impossible. The stock market is inherently volatile and subject to a multitude of factors, including economic indicators, geopolitical events, company performances, and investor sentiment.\n\nThat being said, I can offer some general insights:\n\n1. **Market trends**: If you're looking for a short-term prediction, you can analyze current market trends, such as the overall direction of the market, sector performance, and technical indicators like moving",
-      "I'd love to have a crystal ball to predict the stock market's future. Unfortunately, I don't have one, and predicting the stock market's performance with certainty is extremely challenging, if not impossible.\n\nThe stock market is influenced by a vast array of factors, including economic indicators, geopolitical events, company performance, investor sentiment, and more. These factors can interact with each other in complex ways, making it difficult to predict the market's behavior with accuracy.\n\nThat being said, I can offer some",
-      "I'm not capable of predicting the future, especially when it comes to something as complex and volatile as the stock market. The stock market is influenced by a vast array of factors, including economic indicators, geopolitical events, company performance, and investor sentiment, making it impossible to predict with certainty what will happen tomorrow or any other day.\n\nThat being said, I can provide some general information about the stock market and offer some insights that might be helpful:\n\n1. **Market volatility is normal**: The stock market",
-      "I'm not capable of predicting the stock market's future performance with certainty. The stock market is inherently unpredictable and influenced by a wide range of factors, including economic conditions, geopolitical events, company performance, and investor sentiment.\n\nThere are many factors that can impact the stock market, and it's impossible to account for all of them. Additionally, the stock market is subject to sudden and unexpected events, such as natural disasters, economic shocks, or unexpected changes in government policies.\n\nThat being said, there are",
-      "I'm not capable of predicting the future, and the stock market is inherently unpredictable. The stock market is influenced by a vast array of factors, including economic indicators, geopolitical events, company performance, and investor sentiment, making it impossible to accurately forecast its behavior.\n\nThat being said, I can provide some general insights:\n\n1. **Market trends**: The stock market can be affected by overall trends, such as bull or bear markets, which can be influenced by factors like economic growth, interest rates, and"
-    ],
-    "timestamp": "2026-08-03T14:09:16.517833"
+      "I'm not able to provide real-time weather forecasts. For the most accurate and up-to-date weather information, I recommend checking a reliable weather website or app, such as AccuWeather, Weather.com, or the National Weather Service. You can also check local news or weather reports for the latest forecast in your area. Would you like some tips on how to check the weather forecast?",
+      "I'm not able to provide real-time weather forecasts. For the most accurate and up-to-date weather information, I recommend checking a reliable weather website or app, such as AccuWeather, Weather.com, or the National Weather Service (NWS). These sources can provide you with the latest forecast for your specific location. Would you like some general information on how to check the weather forecast?",
+      "I'm not able to provide real-time weather forecasts. For the most accurate and up-to-date weather information, I recommend checking a reliable weather website or app, such as AccuWeather, Weather.com, or the National Weather Service. You can also check local news sources or tune into weather reports on TV or radio for the latest forecast. Would you like some general information on how to check the weather forecast?",
+      "I'm not able to provide real-time weather forecasts. For the most accurate and up-to-date weather information, I recommend checking a reliable weather website or app, such as AccuWeather, Weather.com, or the National Weather Service. They can provide you with the latest forecast for your location.",
+      "I'm not able to provide real-time weather forecasts. For the most accurate and up-to-date information, I recommend checking a reliable weather website or app, such as AccuWeather or the National Weather Service, for the latest forecast in your area. You can also check local news or weather reports for the latest information. Would you like some general information about how to check the weather forecast?"
+    ]
   }
 ]
