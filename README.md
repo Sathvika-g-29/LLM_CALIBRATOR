@@ -65,7 +65,12 @@ streamlit run app.py
 # Benchmark
 python benchmark.py
 ```
+## Limitations
 
+- Scores the full response, not just the core claim — verbose answers with 
+  varying details score lower than they should
+- Consistent refusals score HIGH even when the question is genuinely uncertain
+- Does not detect confidently wrong answers
 ## What I learned
 
 - Embeddings capture semantic meaning — two differently worded answers can be 95% similar
