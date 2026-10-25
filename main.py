@@ -8,7 +8,7 @@ def run(question, n=5, save=False):
     print(f"Sampling {n} times...\n")
     
     answers = ask_llm(question, n=n)
-    confidence = compute_confidence(answers)
+    confidence = compute_confidence(answers, extract=False)
     label = classify(confidence)
 
     print("\n" + "="*50)

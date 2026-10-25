@@ -19,11 +19,12 @@ nvidia_client = OpenAI(
 def get_embedding(text):
     """Convert text to a vector of numbers."""
     response = nvidia_client.embeddings.create(
-        model="nvidia/nv-embedqa-e5-v5",
+        model="nvidia/nemotron-3.5-embed-1b",
         input=text,
         extra_body={"input_type": "query", "truncate": "END"}
     )
     return response.data[0].embedding
+    
 def cosine_similarity(vec1, vec2):
     """Measure how similar two vectors are. Returns 0.0 to 1.0"""
     dot_product = sum(a * b for a, b in zip(vec1, vec2))
@@ -34,7 +35,7 @@ def cosine_similarity(vec1, vec2):
 def extract_core_answer(text):
     """Ask the LLM to compress a verbose answer to its core claim."""
     response = groq_client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[
             {
                 "role": "system",
@@ -45,7 +46,7 @@ def extract_core_answer(text):
                 "content": text
             }
         ],
-        temperature=0.0,  # no randomness — we want consistent extraction
+        temperature=0.0,
         max_tokens=50
     )
     return response.choices[0].message.content.strip()
@@ -77,8 +78,8 @@ if __name__ == "__main__":
     from sampler import ask_llm
 
     questions = [
-        "What is the capital of France?",       # should be HIGH confidence
-        "Who will win the next FIFA World Cup?"  # should be LOW confidence
+        "What is the capital of France?",
+        "Who will win the next FIFA World Cup?"
     ]
 
     for question in questions:

@@ -14,7 +14,7 @@ def ask_llm(question, n=5):
     answers = []
     for i in range(n):
         response = groq_client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-20b",
             messages=[{"role": "user", "content": question}],
             temperature=0.8,
             max_tokens=100
