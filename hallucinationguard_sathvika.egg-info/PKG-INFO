@@ -1,0 +1,97 @@
+Metadata-Version: 2.4
+Name: hallucinationguard-sathvika
+Version: 0.1.0
+Summary: Confidence scoring and hallucination detection for LLM pipelines
+Author: Sathvika
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# LLM Confidence Calibrator
+
+A tool that measures how confident a Large Language Model is about any question â€” by sampling it multiple times and measuring semantic consistency across responses.
+
+## What it does
+
+Most LLMs give one answer. This tool asks the same question 5 times, converts each answer to an embedding vector, and computes cosine similarity across all pairs. High similarity = the model is consistent = high confidence. Low similarity = the model is uncertain.
+
+## Key Finding
+
+The calibrator measures **response consistency**, not factual certainty. Questions the model consistently refuses to answer (e.g. "Will it rain tomorrow?") score unexpectedly high because refusals are semantically similar across runs. This reveals an important limitation: a confidently wrong model looks the same as a confidently right one.
+
+## How it works
+
+Question â†’ Sample LLM 5x â†’ Embed each answer â†’
+Cosine Similarity across all pairs â†’ Confidence Score
+
+
+## Benchmark Results
+
+Tested against 8 questions with expected confidence levels:
+- **Accuracy: 75%**
+- HIGH confidence questions (factual): 3/4 correct
+- MEDIUM confidence questions (opinion): 2/2 correct  
+- LOW confidence questions (future prediction): 1/2 correct
+
+Misclassified: Future predictions that trigger consistent refusals score MEDIUM instead of LOW.
+
+## Tech Stack
+
+- **LLM**: gpt-oss-20b via Groq API
+- **Embeddings**: NVIDIA NIM (nemotron-3.5-embed-1b)
+- **Similarity**: Cosine similarity (pure Python, no ML libraries)
+- **UI**: Streamlit
+- **Languages**: Python
+
+## Project Structure
+
+llm-calibrator/
+â”œâ”€â”€ sampler.py # Calls LLM n times, collects answers
+â”œâ”€â”€ calibrator.py # Embeds answers, computes cosine similarity
+â”œâ”€â”€ reporter.py # Labels and saves results as JSON
+â”œâ”€â”€ benchmark.py # Tests against known questions, reports accuracy
+â”œâ”€â”€ main.py # CLI interface
+â””â”€â”€ app.py # Streamlit web UI
+
+
+## Run it yourself
+
+```bash
+git clone https://github.com/YOUR_USERNAME/llm-calibrator
+cd llm-calibrator
+pip install -r requirements.txt
+
+# Set your keys
+export GROQ_API_KEY=your_key
+export NVIDIA_API_KEY=your_key
+
+# CLI
+python main.py "Is water wet?"
+
+# Web UI
+streamlit run app.py
+
+# Benchmark
+python benchmark.py
+```
+## Limitations
+
+- Consistent refusals score HIGH even when the question is genuinely uncertain
+- Does not detect confidently wrong answers
+
+## Improvements Made
+
+- Added core answer extraction before embedding â€” reduces noise from 
+  verbose responses and improves accuracy on factual questions
+## What I learned
+
+- Embeddings capture semantic meaning â€” two differently worded answers can be 95% similar
+- Consistency â‰  correctness â€” a calibrator measures one, not the other
+- This is the same embedding concept used in RAG systems, applied to uncertainty measurement

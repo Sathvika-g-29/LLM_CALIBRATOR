@@ -1,0 +1,9 @@
+README.md
+setup.py
+hallucinationguard/__init__.py
+hallucinationguard/core.py
+hallucinationguard_sathvika.egg-info/PKG-INFO
+hallucinationguard_sathvika.egg-info/SOURCES.txt
+hallucinationguard_sathvika.egg-info/dependency_links.txt
+hallucinationguard_sathvika.egg-info/requires.txt
+hallucinationguard_sathvika.egg-info/top_level.txt

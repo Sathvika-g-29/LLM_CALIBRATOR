@@ -44,8 +44,8 @@ Misclassified: Future predictions that trigger consistent refusals score MEDIUM 
 
 ## Tech Stack
 
-- **LLM**: Llama 3.3 70B via Groq API
-- **Embeddings**: NVIDIA NIM (nv-embedqa-e5-v5)
+- **LLM**: gpt-oss-20b via Groq API
+- **Embeddings**: NVIDIA NIM (nemotron-3.5-embed-1b)
 - **Similarity**: Cosine similarity (pure Python, no ML libraries)
 - **UI**: Streamlit
 - **Languages**: Python
